@@ -3,25 +3,19 @@ body {
 }
 
 .my_border {
-    max-height: 1150px;
-    max-width: 900px;
 
+    max-width: 900px;
     border-style: solid;
     border-width: 40px 30px 30px 40px;
-
     border-color: #0e8e94;
-
     border-radius: 1.5%;
-
     background-color: #f2f3f4;
-
     box-shadow: 3px 3px 3px 3px #a3b4ee;
 }
 .binder{
     clear:both;
     position:absolute;
     margin-top:-37px;
-
     left: 50%;
     transform: translateX(-50%);
     display: block;
@@ -31,37 +25,51 @@ body {
 .icons {
     max-width: 20px;
     max-height: 20px;
-    z-index: 200;
-
 
 }
 .photo{
-    max-width: 171.33px;
-    max-height: 171.33px;
+    max-width: 200px;
+    max-height: 200px;
     object-fit: cover;
 }
 
 .point {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     color: #14146e;
-    margin-bottom: 0px;
+
+}
+@media screen and (max-device-width: 490px) {
+    .my_border {
+
+
+        border-style: solid;
+        border-width: 0;
+        border-color: #0e8e94;
+        border-radius: 1.5%;
+        background-color: #f2f3f4;
+        box-shadow: 2px 2px 2px 2px #a3b4ee;
+    }
+
 }
 
 @media print {
     .col-lg-3{
         width: 25%;
-        text-align:right!important
+        text-align:right!important;
     }
-    .col-9{
+    .col-sm-9{
         position: relative;
-    }
 
+
+    }
     .me{
        position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) translateX(-40%);
     }
-    .icons .binder{
+    .icons {
+        display: none;
+    }.binder{
         display: none;
     }
 
@@ -72,7 +80,6 @@ body {
         border-style: solid;
         border-width: 10px;
         border-radius: 1.5%;
-
         background-color: transparent;
         border-color: transparent;
         box-shadow: 3px 3px 3px 3px transparent;
